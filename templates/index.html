@@ -11,6 +11,9 @@
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
       <!-- CSS -->
+      {% if config.extra.hyde_social_links is defined %}
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      {% endif %}
       <link rel="stylesheet" href="{{ get_url(path="print.css", trailing_slash=false) }}" media="print">
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
       <link rel="stylesheet" href="{{ get_url(path="hyde.css", trailing_slash=false) }}">
@@ -44,7 +47,17 @@
                         {% endfor %}
                         {% endblock sidebar_nav %}
                     </ul>
+                    {% block social_links %}
+                    {% if config.extra.hyde_social_links is defined %}
+                    <div class="social-icons">
+                        {% for link in config.extra.hyde_social_links %}
+                        <a href="{{link.url}}"><i class="fa fa-{{link.name}}"></i></a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endblock %}
                 </div>
+
             </div>
         {% endblock sidebar %}
 

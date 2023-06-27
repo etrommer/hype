@@ -275,3 +275,23 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+.theme-custom .sidebar {
+  background-image: linear-gradient(to top, darken(#23373b, 12%), lighten(#23373b, 12%));
+}
+.theme-custom .content a,
+.theme-custom .related-posts li a:hover {
+  color: #23373b;
+}
+
+.social-icons {
+  border-top: 2px solid;
+  padding-top: 1rem;
+  text-align: center;
+}
+.social-icons a {
+  margin: 0 5px;
+}
+.fa {
+  margin: 0 5px;
+}

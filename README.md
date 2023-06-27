@@ -39,6 +39,17 @@ hyde_links = [
 ```
 Each link needs to have a `url` and a `name`.
 
+### Social icons
+Social icons are generated using [FontAwesome](https://fontawesome.com). To add them, add a field with a key of `hyde_social_links`. Pick the name of the icon that you would like to use in the name field.
+```toml
+[extra]
+hyde_social_links = [
+   {url = "/contact_form", name = "envelope"},
+   {url = "/atom.xml", name = "rss"},
+   {url = "https://github.com", name = "github"},
+]
+```
+
 ### Sticky sidebar content
 By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by setting `hyde_sticky` to false in your `config.toml`.
 
