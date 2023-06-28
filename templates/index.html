@@ -11,8 +11,8 @@
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
       <!-- CSS -->
-      {% if config.extra.hyde_social_links is defined %}
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      {% if config.extra.hyde_social_links %}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       {% endif %}
       <link rel="stylesheet" href="{{ get_url(path="print.css", trailing_slash=false) }}" media="print">
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
@@ -20,7 +20,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
       {% if config.generate_feed %}
-        <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+      <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
       {% endif %}
 
       {% block extra_head %}
@@ -39,7 +39,6 @@
                             {% endif %}
                         {% endblock sidebar_about %}
                     </div>
-
                     <ul class="sidebar-nav">
                         {% block sidebar_nav %}
                         {% for link in config.extra.hyde_links %}
@@ -51,7 +50,7 @@
                     {% if config.extra.hyde_social_links is defined %}
                     <div class="social-icons">
                         {% for link in config.extra.hyde_social_links %}
-                        <a href="{{link.url}}"><i class="fa fa-{{link.name}}"></i></a>
+                        <a href="{{link.url}}"><i class="fa-{{link.set}} fa-{{link.name}}"></i></a>
                         {% endfor %}
                     </div>
                     {% endif %}
@@ -60,7 +59,6 @@
 
             </div>
         {% endblock sidebar %}
-
         <div class="content container">
             {% block content %}
                 <div class="posts">
@@ -78,7 +76,5 @@
                 </div>
             {% endblock content %}
         </div>
-
     </body>
-
 </html>
