@@ -1,7 +1,7 @@
-name = "hyde"
-description = "A classic blog theme"
+name = "hype"
+description = "A slightly richer version of hyde"
 license = "MIT"
-homepage = "https://github.com/getzola/hyde"
+homepage = "https://github.com/etrommer/hype"
 min_version = "0.11.0"
 demo = "https://zola-hyde.netlify.app"
 
@@ -13,8 +13,8 @@ hyde_links = [
 ]
 
 [author]
-name = "Vincent Prouillet"
-homepage = "https://www.vincentprouillet.com"
+name = "Elias Trommer"
+homepage = "etrommer.github.io"
 
 [original]
 author =  "mdo"
