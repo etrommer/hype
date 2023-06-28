@@ -282,6 +282,8 @@ a.sidebar-nav-item:focus {
   padding-top: 1rem;
   text-align: center;
 }
-.social-icons a {
-  margin: 0 8px;
+
+.fa-brands,
+.fa-solid {
+  margin: 0 5px;
 }
