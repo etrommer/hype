@@ -1,7 +1,7 @@
-# hyde
-Hyde is a brazen two-column [Zola](https://github.com/getzola/zola) based on the Jekyll theme of the same name that pairs a prominent sidebar with uncomplicated content.
+# hype
+Hype is a brazen two-column [Zola](https://github.com/getzola/zola) based on the Jekyll theme of the same name that pairs a prominent sidebar with uncomplicated content.
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+![Hype screenshot](https://raw.githubusercontent.com/etrommer/hype/master/screenshot.png)
 
 
 ## Contents
@@ -18,12 +18,12 @@ First download this theme to your `themes` directory:
 
 ```bash
 cd themes
-git clone https://github.com/getzola/hyde.git
+git clone https://github.com/etrommer/hype.git
 ```
 and then enable it in your `config.toml`:
 
 ```toml
-theme = "hyde"
+theme = "hype"
 ```
 
 ## Options
@@ -40,13 +40,13 @@ hyde_links = [
 Each link needs to have a `url` and a `name`.
 
 ### Social icons
-Social icons are generated using [FontAwesome](https://fontawesome.com). To add them, add a field with a key of `hyde_social_links`. Pick the name of the icon that you would like to use in the name field.
+Social icons are generated using [FontAwesome](https://fontawesome.com). To add them, add a field with a key of `hyde_social_links`. Set the set and name of the icon that you want to be displayed:
 ```toml
 [extra]
 hyde_social_links = [
-   {url = "/contact_form", name = "envelope"},
-   {url = "/atom.xml", name = "rss"},
-   {url = "https://github.com", name = "github"},
+   {url = "https://www.github.com/etrommer/hype", set="brands", name = "github"},
+   {url = "https://www.researchgate.net", set="brands", name="researchgate"},
+   {url = "https://www.linkedin.com", set="brands", name="linkedin-in"},
 ]
 ```
 
