@@ -1,13 +1,20 @@
 base_url = "https://zola-hyde.netlify.app"
 compile_sass = true
-title = "Hyde theme"
-description = "A clean blogging theme"
+title = "Hype theme"
+description = "don't belive the Hyde"
 generate_feed = true
 
 [extra]
+use_katex = true
 hyde_sticky = true
 hyde_reverse = false
-hyde_theme = ""
+hyde_theme = "theme-hype"
 hyde_links = [
-    {url = "https://google.com", name = "About"},
+    {url = "https://www.duckduckgo.com", name = "About"},
+    {url = "/blog", name = "Blog"},
+]
+hyde_social_links = [
+   {url = "https://www.github.com/etrommer/hype", set="brands", name = "github"},
+   {url = "https://www.researchgate.net", set="brands", name="researchgate"},
+   {url = "https://www.linkedin.com", set="brands", name="linkedin-in"},
 ]
