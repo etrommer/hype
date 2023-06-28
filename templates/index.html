@@ -66,24 +66,11 @@
                     {% endif %}
                     {% endblock %}
                 </div>
-
             </div>
         {% endblock sidebar %}
         <div class="content container">
             {% block content %}
-                <div class="posts">
-                    {% for page in section.pages | reverse %}
-                      <div class="post">
-                        <h1 class="post-title">
-                          <a href="{{ page.permalink }}">
-                            {{ page.title | safe }}
-                          </a>
-                        </h1>
-
-                        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-                      </div>
-                    {% endfor %}
-                </div>
+            {{section.content|safe}}
             {% endblock content %}
         </div>
     </body>

@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="posts">
+    {% for page in section.pages %}
+      <div class="post">
+        {% if page.extra.banner %}
+            {% set image = resize_image(path=page.extra.banner, width=720, height=150) %}
+            <img src="{{ image.url }}" />
+        {% endif %}
+            <h1 class="post-title">
+              <a href="{{ page.permalink }}">
+                {{ page.title | safe }}
+              </a>
+            </h1>
+            <div>{{page.summary | safe}}</div>
+            <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+    {% endfor %}
+</div>
+{% endblock content %}
