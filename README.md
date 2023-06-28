@@ -49,6 +49,14 @@ hyde_social_links = [
    {url = "https://www.linkedin.com", set="brands", name="linkedin-in"},
 ]
 ```
+### Math Rendering
+For multi-line maths, the `{% katex() %}` shortcode is provided:
+```
+{% katex() %}
+e = m \cdot c^2
+{% end %}
+```
+For inline equations, use the KaTeX default delimiters `\\( <LaTeX Code> \\)` (note that you have to escape the backslash characters in Markdown).
 
 ### Sticky sidebar content
 By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by setting `hyde_sticky` to false in your `config.toml`.
