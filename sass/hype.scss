@@ -1,0 +1,16 @@
+$fg-color: #27374d !default;
+$link-color: #030620 !default;
+
+.theme-hype .sidebar {
+  background-image: linear-gradient(to top, darken($fg-color, 12%), lighten($fg-color, 12%));
+}
+
+.theme-hype .content a,
+.theme-hype .related-posts li a:hover 
+{
+  color: $link-color;
+}
+.theme-hype .content a:hover {
+  color: $fg-color;
+}
+
